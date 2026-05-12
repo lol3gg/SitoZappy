@@ -2721,6 +2721,35 @@ h3 {
   border-color: rgba(168, 85, 247, 0.38) !important;
 }
 
+/* ---------- Mobile header & menu fixes ---------- */
+
+@media (max-width: 960px) {
+  .site-header .header-inner {
+    position: relative;
+    justify-content: flex-start;
+  }
+
+  .site-header .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    pointer-events: auto;
+  }
+
+  .site-header .nav-toggle {
+    margin-left: auto;
+  }
+
+  .site-header .nav {
+    background: #ffffff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+  }
+}
+
 /* ---------- Motion system upgrades ---------- */
 
 body {
