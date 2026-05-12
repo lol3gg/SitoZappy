@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ecosistema Zappy: app cliente, app barista, dashboard admin, stampante e starter kit — un sistema integrato per il tuo locale." />
+  <title>Ecosistema — Zappy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="Zappy Home">
+        <img src="images/logo-zappy-finale.png" alt="Zappy" width="512" height="353" />
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Apri menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav" aria-label="Principale">
+        <a href="index.html">Home</a>
+        <a href="ecosistema.html" aria-current="page">Ecosistema</a>
+        <a href="come-funziona.html">Come funziona</a>
+        <a href="perche-zappy.html">Perché Zappy</a>
+        <a href="prezzi.html">Prezzi</a>
+        <a href="contatti.html">Contatti</a>
+        <div class="header-cta header-cta--in-nav">
+          <a class="btn btn--ghost" href="contatti.html">Parla con noi</a>
+          <a class="btn btn--primary" href="contatti.html">Richiedi demo</a>
+        </div>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn--ghost" href="contatti.html">Parla con noi</a>
+        <a class="btn btn--primary" href="contatti.html">Richiedi demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="page-hero">
+      <div class="bg-glow" aria-hidden="true"></div>
+      <div class="mesh" aria-hidden="true"></div>
+      <div class="wrap reveal">
+        <p class="eyebrow">Sistema integrato</p>
+        <h1 class="text-gradient">L’ecosistema che fa girare il locale</h1>
+        <p class="lead">Zappy non è una feature isolata: è una catena di software e hardware progettata per portare ordine dalla sala alla cucina — con dati, velocità e controllo.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight" style="padding-top: 0">
+      <div class="wrap reveal">
+        <figure class="photo-figure page-hero-media">
+          <img class="site-photo" src="images/cliente-dashboard-staff.png" alt="Cliente al tavolo con app Zappy e staff che consulta la dashboard gestionale sul grande schermo al banco" width="1200" height="640" loading="eager" decoding="async" />
+          <figcaption class="photo-caption">Dal telefono del cliente alla postazione sala: dati e ordini sempre allineati.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap reveal">
+        <div class="z-visual z-visual--ecosystem">
+          <article class="z-module z-module--menu">
+            <span class="z-module-icon">QR</span>
+            <h3>Menu & ordine</h3>
+          </article>
+          <article class="z-module z-module--match">
+            <span class="z-module-icon">M</span>
+            <h3>Match social</h3>
+          </article>
+          <article class="z-module z-module--photo">
+            <span class="z-module-icon">P</span>
+            <h3>Photo gallery</h3>
+          </article>
+          <article class="z-module z-module--room">
+            <span class="z-module-icon">R</span>
+            <h3>Room quiz</h3>
+          </article>
+          <article class="z-module z-module--lucky">
+            <span class="z-module-icon">L</span>
+            <h3>Lucky reward</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap split reveal">
+        <div>
+          <p class="eyebrow">01 · Cliente</p>
+          <h2>App cliente: QR, menu, pagamento</h2>
+          <p class="lead">Il cliente scansiona, ordina e paga senza attrito. Il tavolo è identificato in modo sicuro: niente confusione in cassa.</p>
+          <ul class="stack-sm muted" style="list-style:none;padding:0;margin-top:1.25rem">
+            <li>· Menu con immagini, allergeni e varianti</li>
+            <li>· Carrello condivisibile e note chiare</li>
+            <li>· Pagamento mobile (card, wallet)</li>
+          </ul>
+          <div class="tag-row" style="margin-top:1.5rem">
+            <span class="tag">Web + native</span>
+            <span class="tag">Brand locale</span>
+          </div>
+        </div>
+        <div class="split-visual">
+          <figure class="photo-figure split-photo float-slow">
+            <img src="images/qr-menu-smartphone.png" alt="Cliente che scansiona il QR da tavolo e sfoglia il menu Zappy sul telefono" width="900" height="675" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:rgba(255,255,255,0.02)">
+      <div class="wrap split split--reverse reveal">
+        <div>
+          <p class="eyebrow">02 · Sala</p>
+          <h2>App barista · tablet POS</h2>
+          <p class="lead">Un’unica superficie per leggere la sala: ordini in arrivo, priorità, stato e tavoli — con UX pensata per velocità e zero errori.</p>
+          <ul class="stack-sm muted" style="list-style:none;padding:0;margin-top:1.25rem">
+            <li>· Coda live con timestamp</li>
+            <li>· Stati ordine e gestione eccezioni</li>
+            <li>· Vista tavoli e turni</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <figure class="photo-figure split-photo split-photo--ops">
+            <img src="images/banco-menu-coda-stampante.png" alt="Tablet con coda ordini Zappy, menu sul telefono e stampante comande sul banco" width="900" height="675" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap split reveal">
+        <div>
+          <p class="eyebrow">03 · Back-office</p>
+          <h2>Dashboard admin</h2>
+          <p class="lead">Menu, listini, immagini, disponibilità e analytics: il centro di comando che tiene il locale allineato — anche quando cambi offerta ogni settimana.</p>
+          <ul class="stack-sm muted" style="list-style:none;padding:0;margin-top:1.25rem">
+            <li>· CMS menu con versioning</li>
+            <li>· Ruoli e permessi staff</li>
+            <li>· Report vendite e prodotti top</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <figure class="photo-figure split-photo">
+            <img src="images/analytics-titolare.png" alt="Titolare o manager che consulta dashboard e grafici sul tablet in sala" width="900" height="675" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:rgba(255,255,255,0.02)">
+      <div class="wrap split split--reverse reveal">
+        <div>
+          <p class="eyebrow">04 · Cucina</p>
+          <h2>Stampante automatica</h2>
+          <p class="lead">Le comande escono dove servono, quando servono. Routing per reparto, meno voci sbagliate, più ritmo in cucina.</p>
+        </div>
+        <div class="split-visual" style="display:flex;justify-content:center">
+          <figure class="photo-figure split-photo split-photo--printer">
+            <img src="images/banco-menu-coda-stampante.png" alt="Stampante comande e dispositivi Zappy integrati sul banco" width="900" height="675" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap split reveal">
+        <div>
+          <p class="eyebrow">05 · Onboarding</p>
+          <h2>Starter kit</h2>
+          <p class="lead">Tablet, QR personalizzati, stampante e setup guidato: arrivi operativo con un percorso chiaro, non con scatole da assemblare al buio.</p>
+          <ul class="stack-sm muted" style="list-style:none;padding:0;margin-top:1.25rem">
+            <li>· QR brandizzati per tavolo/area</li>
+            <li>· Config stampante e rete</li>
+            <li>· Training rapido per lo staff</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="glass-card card-padding" style="max-width:400px;margin-inline:auto">
+            <h3 class="mb-2" style="font-size:1.1rem">Nel kit</h3>
+            <div class="include-grid" style="grid-template-columns:1fr">
+              <div class="include-item" style="padding:0.75rem 0;border-bottom:1px solid var(--border)">
+                <span class="include-check">✓</span>
+                <div><strong>Tablet professionale</strong><p class="muted mb-0" style="font-size:0.9rem">App barista preconfigurata</p></div>
+              </div>
+              <div class="include-item" style="padding:0.75rem 0;border-bottom:1px solid var(--border)">
+                <span class="include-check">✓</span>
+                <div><strong>QR e materiali</strong><p class="muted mb-0" style="font-size:0.9rem">Coerenti con il brand</p></div>
+              </div>
+              <div class="include-item" style="padding:0.75rem 0">
+                <span class="include-check">✓</span>
+                <div><strong>Stampante + setup</strong><p class="muted mb-0" style="font-size:0.9rem">Integrazione con Zappy</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="glass-card card-padding reveal" style="text-align:center;max-width:820px;margin-inline:auto">
+          <p class="eyebrow" style="justify-content:center">Integrazione totale</p>
+          <h2>Un solo flusso, dall’ingresso al conto</h2>
+          <p class="lead mx-auto">Ogni componente parla la stessa lingua: quando il cliente paga, la sala lo vede, la cucina prepara, la dashboard registra. Niente bridge fragili o tab Excel paralleli.</p>
+          <div class="hero-cta" style="justify-content:center;margin-top:2rem">
+            <a class="btn btn--primary btn--large" href="contatti.html">Pianifica una demo</a>
+            <a class="btn btn--ghost btn--large" href="come-funziona.html">Vedi il flusso operativo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html" aria-label="Zappy Home">
+          <img src="images/logo-zappy-finale.png" alt="Zappy" width="512" height="353" />
+        </a>
+        <p>Sistema completo per ordini e pagamenti al tavolo: app, tablet, dashboard e hardware in un unico ecosistema.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Prodotto</h4>
+        <ul>
+          <li><a href="ecosistema.html">Ecosistema</a></li>
+          <li><a href="come-funziona.html">Come funziona</a></li>
+          <li><a href="prezzi.html">Prezzi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Azienda</h4>
+        <ul>
+          <li><a href="perche-zappy.html">Perché Zappy</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Risorse</h4>
+        <ul>
+          <li><a href="contatti.html">Demo</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© <span id="year"></span> Zappy. Tutti i diritti riservati.</span>
+      <span>Privacy · Cookie · Termini <span class="muted" style="font-size:0.8rem">(placeholder)</span></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

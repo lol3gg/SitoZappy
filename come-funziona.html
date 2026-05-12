@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Come funziona Zappy: dal QR al pagamento, flusso operativo per sala e cucina, con esempi concreti." />
+  <title>Come funziona — Zappy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="Zappy Home">
+        <img src="images/logo-zappy-finale.png" alt="Zappy" width="512" height="353" />
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Apri menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <nav class="nav" aria-label="Principale">
+        <a href="index.html">Home</a>
+        <a href="ecosistema.html">Ecosistema</a>
+        <a href="come-funziona.html" aria-current="page">Come funziona</a>
+        <a href="perche-zappy.html">Perché Zappy</a>
+        <a href="prezzi.html">Prezzi</a>
+        <a href="contatti.html">Contatti</a>
+        <div class="header-cta header-cta--in-nav">
+          <a class="btn btn--ghost" href="contatti.html">Parla con noi</a>
+          <a class="btn btn--primary" href="contatti.html">Richiedi demo</a>
+        </div>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn--ghost" href="contatti.html">Parla con noi</a>
+        <a class="btn btn--primary" href="contatti.html">Richiedi demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="page-hero">
+      <div class="bg-glow" aria-hidden="true"></div>
+      <div class="mesh" aria-hidden="true"></div>
+      <div class="wrap reveal">
+        <p class="eyebrow">Dal tavolo alla cucina</p>
+        <h1 class="text-gradient">Come funziona, dal primo scan all’ultimo euro incassato</h1>
+        <p class="lead">Qui sotto trovi il percorso completo — con esempi realistici di come Zappy coordina cliente, sala e back-office senza inciampi.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight" style="padding-top: 0">
+      <div class="wrap reveal">
+        <figure class="photo-figure page-hero-media">
+          <img class="site-photo" src="images/hero-menu-cliente.png" alt="Flusso ordine e menu: cliente e staff con Zappy al tavolo" width="1200" height="800" loading="eager" decoding="async" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Il percorso del cliente</h2>
+          <p class="lead">Veloce, chiaro, senza dover interrompere una conversazione per chiamare il cameriere.</p>
+        </div>
+        <div class="scroll-row">
+          <article class="glass-card card-padding reveal" style="flex:0 0 min(320px,88vw)">
+            <h3 class="mb-1">1 · Arriva al tavolo</h3>
+            <p class="muted">Trova il QR (plexiglass, tovaglietta, sticker premium). Scansiona con la fotocamera: si apre il menu del locale, già legato al tavolo giusto.</p>
+            <div class="ui-qr" style="width:88px;height:88px;margin-top:1rem"><div class="qr-pattern"></div></div>
+          </article>
+          <article class="glass-card card-padding reveal delay-1" style="flex:0 0 min(320px,88vw)">
+            <h3 class="mb-1">2 · Compone l’ordine</h3>
+            <p class="muted">Aggiunge piatti e bevande, note per allergie o preferenze. Vede tempi e disponibilità aggiornati dalla dashboard.</p>
+            <div class="ui-menu-item" style="margin-top:1rem">
+              <div class="ui-thumb"></div>
+              <div class="ui-lines"><div class="ui-line"></div><div class="ui-line short"></div></div>
+            </div>
+          </article>
+          <article class="glass-card card-padding reveal delay-2" style="flex:0 0 min(320px,88vw)">
+            <h3 class="mb-1">3 · Invia in cucina</h3>
+            <p class="muted">L’ordine compare istantaneamente in sala. La stampa parte dove serve — bar o cucina — senza riscritture a mano.</p>
+            <span class="ui-badge" style="margin-top:1rem;display:inline-block">Sincronizzato</span>
+          </article>
+          <article class="glass-card card-padding reveal delay-3" style="flex:0 0 min(320px,88vw)">
+            <h3 class="mb-1">4 · Paga e riparte</h3>
+            <p class="muted">Chiude il conto dal telefono quando vuole: meno attese in cassa, più rotazione dei tavoli in ore di punta.</p>
+            <div class="ui-pay-btn" style="margin-top:1rem">Paga € 58,20</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap reveal">
+        <div class="z-visual z-visual--flow">
+          <div class="z-flow-node z-flow-node--qr">
+            <div class="z-table-top"></div>
+            <div class="z-qr-mini" aria-hidden="true"></div>
+            <small>QR tavolo</small>
+          </div>
+          <span class="z-connector" aria-hidden="true"></span>
+          <div class="z-flow-node z-flow-node--phone">
+            <div class="z-order-item">
+              <span class="z-order-dot"></span>
+              <div><strong>Ordine inviato</strong><small>T12 · 3 articoli</small></div>
+            </div>
+            <div class="z-order-total">
+              <span>Pagamento</span>
+              <strong>Confermato</strong>
+            </div>
+            <small>Smartphone cliente</small>
+          </div>
+          <span class="z-connector" aria-hidden="true"></span>
+          <div class="z-flow-node z-flow-node--ops">
+            <div class="z-ticket-line"></div>
+            <div class="z-ticket-line short"></div>
+            <div class="z-ticket-line"></div>
+            <small>Stampante + tablet sala</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--flow-highlights">
+      <div class="wrap">
+        <div class="section-head section-head--center reveal">
+          <p class="lead">
+            Tre motivi concreti che rendono Zappy più veloce per i clienti e più efficiente per il locale.
+          </p>
+        </div>
+
+        <div class="flow-highlight-grid">
+          <article class="flow-highlight-card reveal">
+            <h3>Ordine tramite QR al tavolo</h3>
+            <p>Ogni tavolo ha un QR univoco: il cliente lo scansiona e ordina in autonomia dal proprio telefono, senza contatto e senza attese. Più veloce per i clienti e per il locale: diventa moderno ed efficiente.</p>
+          </article>
+
+          <article class="flow-highlight-card reveal delay-1">
+            <h3>Pagamento diretto dal telefono</h3>
+            <p>Dopo aver ordinato, il cliente paga direttamente dal telefono con carta, Apple Pay o Google Pay. Niente file, niente POS, tutto integrato in modo sicuro. Lo scontrino si stampa in tempo reale e il locale lavora meglio.</p>
+          </article>
+
+          <article class="flow-highlight-card reveal delay-2">
+            <h3>Ordini su stampante e tablet</h3>
+            <p>Con lo Starter Kit base, l’ordine arriva subito alla stampante del bar o cucina. Con lo Starter Kit Pro l’ordine arriva anche sul tablet, dove puoi gestirlo o stamparlo. Tutto è chiaro e tracciato: si prepara, si serve. Più velocità, meno errori.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tone-soft">
+      <div class="wrap split reveal">
+        <div>
+          <h2>Esempio: sabato sera</h2>
+          <p class="lead">Tre amici al tavolo 14 ordinano in due ondate. Zappy mantiene il filo unico: stesso tavolo, ordini separati ma tracciati.</p>
+          <ol class="muted stack-sm" style="padding-left:1.2rem;margin-top:1.25rem">
+            <li>Primo round: aperitivi → stampa bar</li>
+            <li>Secondo round: food → stampa cucina + alert tempi</li>
+            <li>Chiusura: split del conto o pagamento unico</li>
+          </ol>
+        </div>
+        <div class="split-visual">
+          <figure class="photo-figure split-photo">
+            <img src="images/ordina-e-paga-tavolo.png" alt="Cliente che conferma ordine e paga con Zappy al tavolo, con staff e QR" width="900" height="675" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head text-center reveal">
+          <h2>Cosa succede dietro le quinte</h2>
+          <p class="lead mx-auto">Il cliente vede semplicità. Il locale vede processi: permessi, aggiornamenti menu, coerenza tra sedi.</p>
+        </div>
+        <div class="benefits-grid">
+          <article class="glass-card card-padding reveal">
+            <h3>Menu sempre allineato</h3>
+            <p class="muted mb-0">Modifiche da dashboard propagate in secondi — niente PDF stampati obsoleti.</p>
+          </article>
+          <article class="glass-card card-padding reveal delay-1">
+            <h3>Staff con meno rumore</h3>
+            <p class="muted mb-0">Meno micro-interruzioni in sala: il team segue la coda, non le mani alzate.</p>
+          </article>
+          <article class="glass-card card-padding reveal delay-2">
+            <h3>Dati utili, non vanity</h3>
+            <p class="muted mb-0">Prodotti trainanti, orari di picco, tempi medi: decisioni basate su numeri reali.</p>
+          </article>
+        </div>
+        <p class="text-center mt-2 reveal">
+          <a class="btn btn--primary" href="ecosistema.html">Torna all’ecosistema</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html" aria-label="Zappy Home">
+          <img src="images/logo-zappy-finale.png" alt="Zappy" width="512" height="353" />
+        </a>
+        <p>Sistema completo per ordini e pagamenti al tavolo: app, tablet, dashboard e hardware in un unico ecosistema.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Prodotto</h4>
+        <ul>
+          <li><a href="ecosistema.html">Ecosistema</a></li>
+          <li><a href="come-funziona.html">Come funziona</a></li>
+          <li><a href="prezzi.html">Prezzi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Azienda</h4>
+        <ul>
+          <li><a href="perche-zappy.html">Perché Zappy</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Risorse</h4>
+        <ul>
+          <li><a href="contatti.html">Demo</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© <span id="year"></span> Zappy. Tutti i diritti riservati.</span>
+      <span>Privacy · Cookie · Termini <span class="muted" style="font-size:0.8rem">(placeholder)</span></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
