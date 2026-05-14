@@ -2,13 +2,13 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contatta Zappy per una demo o informazioni commerciali. Team dedicato ai locali e alle catene." />
-  <title>Contatti — Zappy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Contattaci: nome, cognome, locale, paese e richiesta. Invio su WhatsApp +39 379 383 3583 con messaggio già composto." />
+  <title>Contattaci — Zappy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=47" />
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
@@ -16,7 +16,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html" aria-label="Zappy Home">
-        <img src="images/logo-zappy-finale.png" alt="Zappy" width="512" height="353" />
+        <img src="assets/brand/logo-zappy-icon.png?v=1" alt="Zappy" width="512" height="512" />
       </a>
       <button class="nav-toggle" type="button" aria-label="Apri menu" aria-expanded="false">
         <span></span>
@@ -29,12 +29,12 @@
         <a href="prezzi.html">Prezzi</a>
         <a href="contatti.html" aria-current="page">Contatti</a>
         <div class="header-cta header-cta--in-nav">
-          <a class="btn btn--ghost" href="contatti.html">Parla con noi</a>
+          <a class="btn btn--ghost" href="https://wa.me/393793833583?text=Ciao%2C%20vorrei%20parlare%20con%20voi%20su%20Zappy." target="_blank" rel="noopener noreferrer">Parla con noi</a>
           <a class="btn btn--primary" href="contatti.html">Richiedi demo</a>
         </div>
       </nav>
       <div class="header-cta">
-        <a class="btn btn--ghost" href="contatti.html">Parla con noi</a>
+        <a class="btn btn--ghost" href="https://wa.me/393793833583?text=Ciao%2C%20vorrei%20parlare%20con%20voi%20su%20Zappy." target="_blank" rel="noopener noreferrer">Parla con noi</a>
         <a class="btn btn--primary" href="contatti.html">Richiedi demo</a>
       </div>
     </div>
@@ -44,59 +44,98 @@
     <section class="page-hero">
       <div class="bg-glow" aria-hidden="true"></div>
       <div class="mesh" aria-hidden="true"></div>
-      <div class="wrap reveal">
-        <p class="eyebrow">Team Zappy</p>
-        <h1 class="text-gradient">Parliamo del tuo locale — numeri compresi</h1>
-        <p class="lead">Lasciaci i dettagli: sede, coperti, fascia di affluenza e obiettivi. Ti ricontattiamo con una demo mirata, non generica.</p>
-        <figure class="photo-figure page-hero-media reveal delay-1" style="margin-top: 2rem">
-          <img class="site-photo" src="images/cliente-dashboard-staff.png" alt="Zappy in sala: cliente e team connessi alla stessa piattaforma" width="1200" height="640" loading="lazy" decoding="async" />
-        </figure>
+      <div class="wrap text-center reveal">
+        <p class="eyebrow eyebrow--center">Contatti</p>
+        <h1 class="text-gradient">Contattaci</h1>
       </div>
     </section>
 
-    <section class="section section--tight">
-      <div class="wrap split">
-        <div class="reveal">
-          <h2 class="mb-2">Cosa ricevi dopo l’invio</h2>
-          <ul class="stack-sm muted" style="list-style:none;padding:0">
-            <li>✓ Call di 20’ con product specialist</li>
-            <li>✓ Anteprima flusso cliente + sala</li>
-            <li>✓ Indicazione tempi di setup</li>
-          </ul>
-          <div class="glass-card card-padding mt-2" style="margin-top:2rem">
-            <p class="muted mb-0" style="font-size:0.95rem"><strong style="color:var(--text)">Email</strong><br />zappy1292@gmail.com</p>
-            <p class="muted mb-0 mt-2" style="font-size:0.95rem;margin-top:1rem"><strong style="color:var(--text)">Uffici</strong><br />Urbania (PU), Italia</p>
-          </div>
-        </div>
-        <div class="reveal delay-1">
-          <form class="form glass-card card-padding" id="form-contatti" action="#" method="post">
+    <section class="section section--tight section-contact" aria-labelledby="contact-form-title">
+      <div class="wrap contact-block text-left">
+        <div class="contact-card glass-card card-padding reveal delay-1">
+          <header class="contact-card__head">
+            <h2 id="contact-form-title" class="contact-card__title">Richiedi informazioni</h2>
+            <p class="contact-card__subtitle muted">
+              Compila i campi e tocca <strong>Invia messaggio</strong>: si apre WhatsApp con tutto già ordinato.
+            </p>
+          </header>
+          <form
+            id="form-contatti"
+            class="form form-contact"
+            action="#"
+            method="post"
+            aria-labelledby="contact-form-title"
+            aria-describedby="contact-form-footnote"
+          >
             <div>
-              <label for="nome">Nome e cognome</label>
-              <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Mario Rossi" />
+              <label for="contatto-nome">Nome</label>
+              <input
+                id="contatto-nome"
+                name="nome"
+                type="text"
+                autocomplete="given-name"
+                required
+                maxlength="60"
+                placeholder="Es. Mario"
+              />
             </div>
             <div>
-              <label for="email">Email di lavoro</label>
-              <input id="email" name="email" type="email" autocomplete="email" required placeholder="nome@locale.it" />
+              <label for="contatto-cognome">Cognome</label>
+              <input
+                id="contatto-cognome"
+                name="cognome"
+                type="text"
+                autocomplete="family-name"
+                required
+                maxlength="80"
+                placeholder="Es. Rossi"
+              />
             </div>
             <div>
-              <label for="locale">Locale / ragione sociale</label>
-              <input id="locale" name="locale" type="text" required placeholder="Ristorante · Milano" />
+              <label for="contatto-locale">Locale</label>
+              <input
+                id="contatto-locale"
+                name="locale"
+                type="text"
+                autocomplete="organization"
+                required
+                maxlength="120"
+                placeholder="Es. Bar Centrale"
+              />
             </div>
             <div>
-              <label for="piano">Interesse</label>
-              <select id="piano" name="piano">
-                <option value="demo">Demo prodotto</option>
-                <option value="starter">Piano Starter</option>
-                <option value="pro">Piano Pro</option>
-                <option value="enterprise">Enterprise / multi-sede</option>
-              </select>
+              <label for="contatto-paese">Paese</label>
+              <input
+                id="contatto-paese"
+                name="paese"
+                type="text"
+                autocomplete="country-name"
+                required
+                maxlength="80"
+                placeholder="Es. Italia, Milano"
+                aria-describedby="hint-paese"
+              />
+              <p class="field-hint" id="hint-paese">Paese e, se vuoi, città o zona (es. Italia — Milano).</p>
             </div>
-            <div>
-              <label for="messaggio">Messaggio</label>
-              <textarea id="messaggio" name="messaggio" placeholder="Coperti, sedi, esigenze di integrazione…"></textarea>
+            <div class="form-riguardo">
+              <label for="contatto-argomento">Vorrei più informazioni riguardo a</label>
+              <textarea
+                id="contatto-argomento"
+                name="argomento"
+                required
+                maxlength="700"
+                rows="4"
+                placeholder="Es. costi, tempi di attivazione, integrazione con la cassa…"
+                aria-describedby="hint-argomento"
+              ></textarea>
+              <p class="field-hint" id="hint-argomento">Nel messaggio WhatsApp comparirà questa intestazione seguita da due punti e da quanto scrivi qui.</p>
             </div>
-            <button class="btn btn--primary btn--large" type="submit">Invia richiesta</button>
-            <p class="muted mb-0" style="font-size:0.8rem">Inviando il modulo accetti di essere ricontattato per finalità commerciali. <span class="muted">Privacy policy (placeholder).</span></p>
+            <div class="form-actions">
+              <button class="btn btn--primary btn--large btn--submit" type="submit">Invia messaggio</button>
+            </div>
+            <p id="contact-form-footnote" class="muted mb-0 form-footnote">
+              Si apre WhatsApp verso <a href="tel:+393793833583">+39 379 383 3583</a> con il testo completo. I dati non restano sul sito.
+            </p>
           </form>
         </div>
       </div>
@@ -107,7 +146,7 @@
     <div class="wrap footer-grid">
       <div class="footer-brand">
         <a class="logo" href="index.html" aria-label="Zappy Home">
-          <img src="images/logo-zappy-finale.png" alt="Zappy" width="512" height="353" />
+          <img src="assets/brand/logo-zappy.png?v=2" alt="Zappy" width="1024" height="682" />
         </a>
         <p>Sistema completo per ordini e pagamenti al tavolo: app, tablet, dashboard e hardware in un unico ecosistema.</p>
       </div>
@@ -140,32 +179,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("form-contatti").addEventListener("submit", function (e) {
-      e.preventDefault();
-      var form = e.currentTarget;
-      var nome = (form.querySelector("#nome") || {}).value || "";
-      var email = (form.querySelector("#email") || {}).value || "";
-      var locale = (form.querySelector("#locale") || {}).value || "";
-      var piano = (form.querySelector("#piano") || {}).value || "";
-      var messaggio = (form.querySelector("#messaggio") || {}).value || "";
-
-      var testo = [
-        "Nuova richiesta dal sito Zappy",
-        "",
-        "Nome: " + nome,
-        "Email: " + email,
-        "Locale: " + locale,
-        "Interesse: " + piano,
-        "Messaggio: " + (messaggio || "-")
-      ].join("\n");
-
-      var numeroWhatsApp = "393791243514";
-      var url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(testo);
-      window.open(url, "_blank");
-    });
-  </script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>

@@ -2,13 +2,13 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="Come funziona Zappy: dal QR al pagamento, flusso operativo per sala e cucina, con esempi concreti." />
   <title>Come funziona — Zappy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=47" />
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
@@ -16,7 +16,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html" aria-label="Zappy Home">
-        <img src="images/logo-zappy-finale.png" alt="Zappy" width="512" height="353" />
+        <img src="assets/brand/logo-zappy-icon.png?v=1" alt="Zappy" width="512" height="512" />
       </a>
       <button class="nav-toggle" type="button" aria-label="Apri menu" aria-expanded="false">
         <span></span>
@@ -29,12 +29,12 @@
         <a href="prezzi.html">Prezzi</a>
         <a href="contatti.html">Contatti</a>
         <div class="header-cta header-cta--in-nav">
-          <a class="btn btn--ghost" href="contatti.html">Parla con noi</a>
+          <a class="btn btn--ghost" href="https://wa.me/393793833583?text=Ciao%2C%20vorrei%20parlare%20con%20voi%20su%20Zappy." target="_blank" rel="noopener noreferrer">Parla con noi</a>
           <a class="btn btn--primary" href="contatti.html">Richiedi demo</a>
         </div>
       </nav>
       <div class="header-cta">
-        <a class="btn btn--ghost" href="contatti.html">Parla con noi</a>
+        <a class="btn btn--ghost" href="https://wa.me/393793833583?text=Ciao%2C%20vorrei%20parlare%20con%20voi%20su%20Zappy." target="_blank" rel="noopener noreferrer">Parla con noi</a>
         <a class="btn btn--primary" href="contatti.html">Richiedi demo</a>
       </div>
     </div>
@@ -48,14 +48,6 @@
         <p class="eyebrow">Dal tavolo alla cucina</p>
         <h1 class="text-gradient">Come funziona, dal primo scan all’ultimo euro incassato</h1>
         <p class="lead">Qui sotto trovi il percorso completo — con esempi realistici di come Zappy coordina cliente, sala e back-office senza inciampi.</p>
-      </div>
-    </section>
-
-    <section class="section section--tight" style="padding-top: 0">
-      <div class="wrap reveal">
-        <figure class="photo-figure page-hero-media">
-          <img class="site-photo" src="images/hero-menu-cliente.png" alt="Flusso ordine e menu: cliente e staff con Zappy al tavolo" width="1200" height="800" loading="eager" decoding="async" />
-        </figure>
       </div>
     </section>
 
@@ -163,8 +155,8 @@
           </ol>
         </div>
         <div class="split-visual">
-          <figure class="photo-figure split-photo">
-            <img src="images/ordina-e-paga-tavolo.png" alt="Cliente che conferma ordine e paga con Zappy al tavolo, con staff e QR" width="900" height="675" loading="lazy" decoding="async" />
+          <figure class="photo-figure split-photo split-photo--zappy-banner">
+            <img src="images/hero-ordina-composito.png?v=3" alt="Cliente in sala con Zappy: QR sul tavolo e ordine digitale dall’app" width="1024" height="681" loading="lazy" decoding="async" />
           </figure>
         </div>
       </div>
@@ -201,7 +193,7 @@
     <div class="wrap footer-grid">
       <div class="footer-brand">
         <a class="logo" href="index.html" aria-label="Zappy Home">
-          <img src="images/logo-zappy-finale.png" alt="Zappy" width="512" height="353" />
+          <img src="assets/brand/logo-zappy.png?v=2" alt="Zappy" width="1024" height="682" />
         </a>
         <p>Sistema completo per ordini e pagamenti al tavolo: app, tablet, dashboard e hardware in un unico ecosistema.</p>
       </div>
@@ -234,9 +226,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>

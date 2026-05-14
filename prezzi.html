@@ -2,13 +2,13 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="Prezzi Zappy: piani Starter, Pro ed Enterprise. Confronto funzionalità e dettagli per il tuo locale." />
   <title>Prezzi — Zappy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=47" />
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
@@ -16,7 +16,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html" aria-label="Zappy Home">
-        <img src="images/logo-zappy-finale.png" alt="Zappy" width="512" height="353" />
+        <img src="assets/brand/logo-zappy-icon.png?v=1" alt="Zappy" width="512" height="512" />
       </a>
       <button class="nav-toggle" type="button" aria-label="Apri menu" aria-expanded="false">
         <span></span>
@@ -29,12 +29,12 @@
         <a href="prezzi.html" aria-current="page">Prezzi</a>
         <a href="contatti.html">Contatti</a>
         <div class="header-cta header-cta--in-nav">
-          <a class="btn btn--ghost" href="contatti.html">Parla con noi</a>
+          <a class="btn btn--ghost" href="https://wa.me/393793833583?text=Ciao%2C%20vorrei%20parlare%20con%20voi%20su%20Zappy." target="_blank" rel="noopener noreferrer">Parla con noi</a>
           <a class="btn btn--primary" href="contatti.html">Richiedi demo</a>
         </div>
       </nav>
       <div class="header-cta">
-        <a class="btn btn--ghost" href="contatti.html">Parla con noi</a>
+        <a class="btn btn--ghost" href="https://wa.me/393793833583?text=Ciao%2C%20vorrei%20parlare%20con%20voi%20su%20Zappy." target="_blank" rel="noopener noreferrer">Parla con noi</a>
         <a class="btn btn--primary" href="contatti.html">Richiedi demo</a>
       </div>
     </div>
@@ -49,7 +49,7 @@
         <h1 class="text-gradient">Scegli il pacchetto Zappy giusto per il tuo locale.</h1>
         <p class="lead">Due pacchetti, entrambi a 87€/mese: Base per operatività digitale completa, Avanzato con integrazione app fiscale per invio automatico all’Agenzia delle Entrate.</p>
         <figure class="photo-figure page-hero-media reveal delay-1" style="margin-top: 2rem">
-          <img class="site-photo" src="images/promo-semplice-veloce.png" alt="Semplice, veloce, Zappy: pagamento contactless al tavolo" width="1200" height="600" loading="lazy" decoding="async" />
+          <img class="site-photo" src="images/promo-semplice-veloce.png?v=3" alt="Cliente al ristorante con QR Zappy sul tavolo per ordinare e pagare in autonomia" width="1024" height="681" loading="lazy" decoding="async" />
         </figure>
       </div>
     </section>
@@ -60,7 +60,7 @@
           <article class="glass-card price-card price-card--featured reveal">
             <p class="muted mb-0">PACCHETTO BASE</p>
             <h3>Zappy Base</h3>
-            <p class="price-amount">597€<span>starter pack</span></p>
+            <p class="price-amount">649€<span>starter pack</span></p>
             <p class="muted mb-0"><strong>87€/mese</strong> · piattaforma + assistenza operativa</p>
             <ul class="price-features">
               <li>Menu digitale personalizzato per il tuo locale</li>
@@ -69,13 +69,14 @@
               <li>Ordini digitali e gestione operativa</li>
               <li>Nessun hardware POS incluso</li>
               <li>App per i clienti (Match, Land, Photo, Room, Lucky)</li>
+              <li>Commissione <strong>1,6%</strong> sui pagamenti effettuati tramite l’app</li>
             </ul>
             <a class="btn btn--primary" href="contatti.html" style="width:100%">Richiedi questo pack</a>
           </article>
           <article class="glass-card price-card reveal delay-1">
             <p class="muted mb-0">PACCHETTO AVANZATO</p>
             <h3>Zappy Avanzato</h3>
-            <p class="price-amount">597€<span>starter pack</span></p>
+            <p class="price-amount">649€<span>starter pack</span></p>
             <p class="muted mb-0"><strong>87€/mese</strong> · piattaforma + assistenza + integrazione fiscale</p>
             <ul class="price-features">
               <li>Tutte le funzionalità del pacchetto Base</li>
@@ -85,6 +86,7 @@
               <li>Invio automatico dei corrispettivi all’Agenzia delle Entrate (con abbonamento extra software partner)</li>
               <li>Abbonamento software partner non incluso nel canone Zappy</li>
               <li>App per i clienti (Match, Land, Photo, Room, Lucky)</li>
+              <li>Commissione <strong>1,6%</strong> sui pagamenti effettuati tramite l’app</li>
             </ul>
             <a class="btn btn--primary" href="contatti.html" style="width:100%">Richiedi questo pack</a>
           </article>
@@ -135,19 +137,24 @@
                 <td>✓</td>
               </tr>
               <tr>
-                <td>Integrazione app fiscale</td>
-                <td>—</td>
+                <td>Commissione 1,6% sui pagamenti tramite app</td>
+                <td>✓</td>
                 <td>✓</td>
               </tr>
               <tr>
-                <td>Invio automatico corrispettivi all’Agenzia Entrate (con abbonamento extra software partner)</td>
+                <td>Integrazione app fiscale</td>
                 <td>—</td>
-                <td>✓</td>
+                <td>✓ (con abbonamento in più)</td>
+              </tr>
+              <tr>
+                <td>Invio automatico corrispettivi all’Agenzia Entrate</td>
+                <td>—</td>
+                <td>✓ (con abbonamento in più)</td>
               </tr>
               <tr>
                 <td>Starter pack una tantum</td>
-                <td>597€</td>
-                <td>597€</td>
+                <td>649€</td>
+                <td>649€</td>
               </tr>
               <tr>
                 <td>Canone mensile</td>
@@ -166,7 +173,7 @@
           <h2 class="text-gradient">Hai volumi alti o più sedi?</h2>
           <p class="lead mx-auto">Ti prepariamo un preventivo con onboarding, hardware e SLA chiari — niente sorprese a progetto avviato.</p>
           <div class="hero-cta" style="justify-content:center;margin-top:2rem">
-            <a class="btn btn--primary btn--large" href="contatti.html">Parla con il team</a>
+            <a class="btn btn--primary btn--large" href="https://wa.me/393793833583?text=Ciao%2C%20vorrei%20parlare%20con%20il%20team%20Zappy." target="_blank" rel="noopener noreferrer">Parla con il team</a>
           </div>
         </div>
       </div>
@@ -177,7 +184,7 @@
     <div class="wrap footer-grid">
       <div class="footer-brand">
         <a class="logo" href="index.html" aria-label="Zappy Home">
-          <img src="images/logo-zappy-finale.png" alt="Zappy" width="512" height="353" />
+          <img src="assets/brand/logo-zappy.png?v=2" alt="Zappy" width="1024" height="682" />
         </a>
         <p>Sistema completo per ordini e pagamenti al tavolo: app, tablet, dashboard e hardware in un unico ecosistema.</p>
       </div>
@@ -210,9 +217,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>

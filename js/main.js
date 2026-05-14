@@ -18,7 +18,15 @@
   if (reduceMotion) {
     markReady();
   } else {
-    requestAnimationFrame(markReady);
+    try {
+      if (typeof window.matchMedia === "function" && window.matchMedia("(max-width: 960px)").matches) {
+        markReady();
+      } else {
+        requestAnimationFrame(markReady);
+      }
+    } catch (err2) {
+      requestAnimationFrame(markReady);
+    }
   }
 
   function onScroll() {
@@ -64,19 +72,84 @@
   onScroll();
   updateParallax();
 
+  var navCloseTimer = null;
+  var navCloseMs = reduceMotion ? 0 : 320;
+
+  function clearNavCloseTimer() {
+    if (navCloseTimer) {
+      clearTimeout(navCloseTimer);
+      navCloseTimer = null;
+    }
+  }
+
+  function resetMobileNavUi() {
+    clearNavCloseTimer();
+    if (header) header.classList.remove("nav-open");
+    if (nav) nav.classList.remove("is-open");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+    document.documentElement.classList.remove("nav-no-scroll");
+  }
+
+  function scheduleHeaderNavOpenOff() {
+    clearNavCloseTimer();
+    if (navCloseMs === 0) {
+      if (header) header.classList.remove("nav-open");
+      document.documentElement.classList.remove("nav-no-scroll");
+      return;
+    }
+    navCloseTimer = setTimeout(function () {
+      if (header) header.classList.remove("nav-open");
+      document.documentElement.classList.remove("nav-no-scroll");
+      navCloseTimer = null;
+    }, navCloseMs);
+  }
+
+  window.addEventListener("pagehide", function () {
+    resetMobileNavUi();
+  });
+
+  window.addEventListener("pageshow", function () {
+    resetMobileNavUi();
+    onScroll();
+    updateParallax();
+  });
+
+  document.addEventListener(
+    "click",
+    function (e) {
+      if (!nav || !nav.classList.contains("is-open")) return;
+      var t = e.target;
+      if (!t || !t.closest) return;
+      var a = t.closest("a[href]");
+      if (!a) return;
+      var href = a.getAttribute("href");
+      if (href === null || href === "" || href.indexOf("javascript:") === 0) return;
+      resetMobileNavUi();
+    },
+    true
+  );
+
   if (navToggle && nav && header) {
+    resetMobileNavUi();
+
     navToggle.addEventListener("click", function () {
       var open = nav.classList.toggle("is-open");
-      header.classList.toggle("nav-open", open);
-      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-
-    nav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        nav.classList.remove("is-open");
-        header.classList.remove("nav-open");
+      if (open) {
+        clearNavCloseTimer();
+        header.classList.add("nav-open");
+        navToggle.setAttribute("aria-expanded", "true");
+        document.documentElement.classList.add("nav-no-scroll");
+      } else {
         navToggle.setAttribute("aria-expanded", "false");
-      });
+        scheduleHeaderNavOpenOff();
+      }
+    });
+  }
+
+  var logo = document.querySelector(".site-header .logo");
+  if (logo) {
+    logo.addEventListener("click", function () {
+      resetMobileNavUi();
     });
   }
 
@@ -137,14 +210,14 @@
     var trigger = item.querySelector(".faq-trigger");
     if (!trigger) return;
     trigger.addEventListener("click", function () {
+      var list = item.closest(".faq-list");
+      if (!list) return;
       var wasOpen = item.classList.contains("is-open");
-      item.closest(".faq-list")
-        .querySelectorAll(".faq-item.is-open")
-        .forEach(function (openItem) {
-          openItem.classList.remove("is-open");
-          var t = openItem.querySelector(".faq-trigger");
-          if (t) t.setAttribute("aria-expanded", "false");
-        });
+      list.querySelectorAll(".faq-item.is-open").forEach(function (openItem) {
+        openItem.classList.remove("is-open");
+        var t = openItem.querySelector(".faq-trigger");
+        if (t) t.setAttribute("aria-expanded", "false");
+      });
       if (!wasOpen) {
         item.classList.add("is-open");
         trigger.setAttribute("aria-expanded", "true");
@@ -164,4 +237,70 @@
       }
     });
   });
+
+  var yearFooter = document.getElementById("year");
+  if (yearFooter) {
+    yearFooter.textContent = String(new Date().getFullYear());
+  }
+
+  var contactForm = document.getElementById("form-contatti");
+  if (contactForm) {
+    var contactReveal = contactForm.closest(".reveal");
+    if (contactReveal) {
+      contactReveal.classList.add("is-visible");
+    }
+
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var nomeEl = document.getElementById("contatto-nome");
+      var cognomeEl = document.getElementById("contatto-cognome");
+      var localeEl = document.getElementById("contatto-locale");
+      var paeseEl = document.getElementById("contatto-paese");
+      var argomentoEl = document.getElementById("contatto-argomento");
+      var fields = [nomeEl, cognomeEl, localeEl, paeseEl, argomentoEl];
+      fields.forEach(function (el) {
+        if (el && typeof el.value === "string") {
+          el.value = el.value.trim();
+        }
+      });
+      fields.forEach(function (el) {
+        if (el) el.setCustomValidity(el.value ? "" : "Compila questo campo.");
+      });
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        fields.forEach(function (el) {
+          if (el) el.setCustomValidity("");
+        });
+        return;
+      }
+      fields.forEach(function (el) {
+        if (el) el.setCustomValidity("");
+      });
+      var nome = nomeEl ? nomeEl.value : "";
+      var cognome = cognomeEl ? cognomeEl.value : "";
+      var locale = localeEl ? localeEl.value : "";
+      var paese = paeseEl ? paeseEl.value : "";
+      var argomento = argomentoEl ? argomentoEl.value : "";
+      var waPhone = "393793833583";
+      var body = [
+        "Ciao,",
+        "",
+        "Vorrei più informazioni riguardo a:",
+        argomento,
+        "",
+        "- Dati -",
+        "Nome: " + nome,
+        "Cognome: " + cognome,
+        "Locale: " + locale,
+        "Paese: " + paese,
+        "",
+        "Grazie."
+      ].join("\n");
+      var encoded = encodeURIComponent(body);
+      var url = "https://wa.me/" + waPhone + "?text=" + encoded;
+      setTimeout(function () {
+        window.location.assign(url);
+      }, 0);
+    });
+  }
 })();
